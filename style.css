@@ -1,22 +1,33 @@
 body {
   margin: 0;
-  padding: 0;
   background: url('background.png') center/cover no-repeat fixed;
   font-family: 'Inter', sans-serif;
   color: #fff;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+}
+
+canvas#stars {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 0;
 }
 
 .hero {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  margin-top: 10vh;
   padding: 3rem;
-  border-radius: 12px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 20px rgba(140, 0, 255, 0.4);
+  backdrop-filter: blur(14px);
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(146, 53, 255, 0.6);
+  transition: box-shadow 0.4s ease;
+}
+
+.hero:hover {
+  box-shadow: 0 0 35px rgba(200, 100, 255, 0.8);
 }
 
 .logo {
@@ -25,8 +36,11 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 2.8rem;
+  background: linear-gradient(90deg, #7c3aed, #9333ea);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.3rem;
 }
 
 p {
@@ -34,7 +48,7 @@ p {
   margin-bottom: 2rem;
 }
 
-.buttons .btn {
+.btn {
   background: linear-gradient(135deg, #9333ea, #7c3aed);
   padding: 0.75rem 1.5rem;
   margin: 0.5rem;
@@ -42,9 +56,14 @@ p {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: transform 0.3s ease;
 }
 
-.buttons .link {
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.link {
   display: inline-block;
   color: #c7c7c7;
   margin: 0.5rem;
