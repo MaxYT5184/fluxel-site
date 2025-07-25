@@ -23,13 +23,13 @@ function draw() {
     if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
 
     ctx.beginPath();
-    ctx.arc(p.x, p.y, 1.6, 0, 2 * Math.PI);
+    ctx.arc(p.x, p.y, 1.5, 0, 2 * Math.PI);
     ctx.fill();
 
     points.forEach(q => {
-      let dx = p.x - q.x;
-      let dy = p.y - q.y;
-      let dist = Math.sqrt(dx * dx + dy * dy);
+      const dx = p.x - q.x;
+      const dy = p.y - q.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
       if (dist < 80) {
         ctx.strokeStyle = "rgba(146, 53, 255, 0.1)";
         ctx.lineWidth = 0.5;
