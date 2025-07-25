@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('background.png') center center/cover no-repeat fixed;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+}
+
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+button {
+  background: linear-gradient(135deg, #7c3aed, #9333ea);
+  border: none;
+  padding: 1rem 2rem;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
