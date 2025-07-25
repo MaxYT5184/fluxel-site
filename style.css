@@ -1,24 +1,53 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('background.png') center center/cover no-repeat fixed;
+  background: url('background.png') center/cover no-repeat fixed;
   font-family: 'Inter', sans-serif;
   color: #fff;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header {
-  background-color: rgba(0, 0, 0, 0.6);
-  padding: 3rem;
+.hero {
   text-align: center;
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.6);
+  padding: 3rem;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(140, 0, 255, 0.4);
 }
 
-button {
-  background: linear-gradient(135deg, #7c3aed, #9333ea);
-  border: none;
-  padding: 1rem 2rem;
-  color: #fff;
+.logo {
+  width: 96px;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.buttons .btn {
+  background: linear-gradient(135deg, #9333ea, #7c3aed);
+  padding: 0.75rem 1.5rem;
+  margin: 0.5rem;
   border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.buttons .link {
+  display: inline-block;
+  color: #c7c7c7;
+  margin: 0.5rem;
+  text-decoration: underline;
+  font-size: 0.9rem;
 }
