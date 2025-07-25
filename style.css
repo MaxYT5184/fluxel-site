@@ -2,12 +2,12 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background: #0c051a; /* deep dark violet */
+  background: #0c051a;
   font-family: 'Inter', sans-serif;
   color: #fff;
 }
 
-canvas#background {
+canvas#stars {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,13 +17,37 @@ canvas#background {
   pointer-events: none;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.navbar a {
+  color: #d1b2ff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.navbar a:hover {
+  color: #fff;
+}
+
 .hero {
   position: relative;
   z-index: 1;
-  margin: 10vh auto;
+  margin: 12vh auto 8vh;
   background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(12px);
   padding: 3rem;
+  max-width: 800px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 25px rgba(146, 53, 255, 0.5);
@@ -32,7 +56,7 @@ canvas#background {
 
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 25px rgba(146, 53, 255, 0.5); }
-  50% { box-shadow: 0 0 45px rgba(146, 53, 255, 0.8); }
+  50% { box-shadow: 0 0 40px rgba(146, 53, 255, 0.8); }
 }
 
 .btn {
@@ -46,8 +70,28 @@ canvas#background {
   font-weight: bold;
   transition: transform 0.3s ease;
 }
-
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #9333ea;
+}
+
+.link {
+  display: inline-block;
+  color: #c7c7c7;
+  margin: 0.5rem;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 1rem;
+  color: #c7c7c7;
+  font-size: 0.9rem;
+  z-index: 2;
 }
