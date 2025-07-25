@@ -83,6 +83,12 @@ canvas#stars {
   font-size: 0.9rem;
 }
 
+.logo {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
