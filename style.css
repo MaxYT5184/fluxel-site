@@ -1,12 +1,15 @@
-body {
+/* Viewport padding & scroll fix */
+html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background: #0c051a;
+  overflow-x: hidden;
   font-family: 'Inter', sans-serif;
+  background: #0c051a;
   color: #fff;
+  scroll-behavior: smooth;
 }
 
+/* Canvas background */
 canvas#stars {
   position: fixed;
   top: 0;
@@ -17,6 +20,20 @@ canvas#stars {
   pointer-events: none;
 }
 
+/* Development banner */
+.dev-warning {
+  position: relative;
+  z-index: 999;
+  background-color: #ffcc00;
+  color: #000;
+  text-align: center;
+  padding: 12px 8px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 0 12px #ffcc00;
+}
+
+/* Navigation bar */
 .navbar {
   position: fixed;
   top: 0;
@@ -24,12 +41,12 @@ canvas#stars {
   background: rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 1rem;
   z-index: 2;
 }
-
 .navbar a {
   color: #d1b2ff;
   text-decoration: none;
@@ -40,25 +57,27 @@ canvas#stars {
   color: #fff;
 }
 
+/* Hero section */
 .hero {
   position: relative;
   z-index: 1;
-  margin: 12vh auto 8vh;
+  margin: 14vh auto 8vh;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(12px);
-  padding: 3rem;
-  max-width: 800px;
+  padding: 2rem;
+  max-width: 95%;
+  width: 600px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 0 25px rgba(146, 53, 255, 0.5);
   animation: pulse 5s ease-in-out infinite;
 }
-
 @keyframes pulse {
   0%, 100% { box-shadow: 0 0 25px rgba(146, 53, 255, 0.5); }
   50% { box-shadow: 0 0 40px rgba(146, 53, 255, 0.8); }
 }
 
+/* Buttons */
 .btn {
   margin-top: 2rem;
   padding: 0.75rem 1.5rem;
@@ -69,40 +88,23 @@ canvas#stars {
   text-decoration: none;
   font-weight: bold;
   transition: transform 0.3s ease;
+  display: inline-block;
 }
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 10px #9333ea;
 }
 
-.link {
-  display: inline-block;
-  color: #c7c7c7;
-  margin: 0.5rem;
-  text-decoration: underline;
-  font-size: 0.9rem;
-}
-
+/* Logo */
 .logo {
-  max-width: 200px;
+  max-width: 100%;
   height: auto;
   margin-bottom: 1rem;
 }
 
-.dev-warning {
-  background-color: #ffcc00;
-  color: #000;
-  text-align: center;
-  padding: 10px;
-  font-weight: 700;
-  font-family: 'Inter', sans-serif;
-  box-shadow: 0 0 10px #ffcc00;
-  z-index: 9999;
-}
-
+/* Footer */
 .footer {
-  position: fixed;
-  bottom: 0;
+  position: relative;
   width: 100%;
   background: rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
