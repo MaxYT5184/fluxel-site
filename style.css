@@ -89,6 +89,17 @@ canvas#stars {
   margin-bottom: 1rem;
 }
 
+.dev-warning {
+  background-color: #ffcc00;
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 0 10px #ffcc00;
+  z-index: 9999;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
