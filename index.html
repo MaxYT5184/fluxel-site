@@ -4,33 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fluxel | Powerful Server Manager</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="dev-warning">
-      🚧 Still in Development — Fixing Bugs in the Website and Bot Hosting
-  </div>
+  <!-- Background Stars -->
   <canvas id="stars"></canvas>
+
+  <!-- Navbar -->
   <nav class="navbar">
-    <a href="index.html">Home</a>
-    <a href="features.html">Features</a>
-    <a href="commands.html">Commands</a>
-    <a href="support.html">Support</a>
-    <a href="terms.html">Terms</a>
-    <a href="privacy.html">Privacy</a>
+    <div class="logo-text">Fluxel</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="commands.html">Commands</a>
+      <a href="support.html">Support</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
   </nav>
-  <div class="hero">
+
+  <!-- Hero Section -->
+  <section class="hero">
     <img src="log.png" alt="Fluxel Logo" class="logo" />
     <h1>Fluxel Server Manager</h1>
-    <p>A powerful and stylish role bot</p>
-    <p>"Still On Development & Fixxing Bugs from the website andbot hosting"</p>
+    <p class="subtitle">A powerful and stylish role bot for Discord</p>
     <div class="buttons">
-      <a href="https://discord.com/oauth2/authorize?client_id=1398397518445940906&permissions=2415987712&integration_type=0&scope=bot+applications.commands" class="btn">Invite Bot</a>
-      <a href="https://top.gg/bot/1398397518445940906/vote" class="btn">Vote</a>
+      <a href="https://discord.com/oauth2/authorize?client_id=1398397518445940906&permissions=2415987712&integration_type=0&scope=bot+applications.commands" class="btn primary">🚀 Invite Bot</a>
+      <a href="https://top.gg/bot/1398397518445940906/vote" class="btn secondary">⭐ Vote</a>
     </div>
-  </div>
+  </section>
+
+  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Fluxel Bot. Crafted with 💜 for your servers.</p>
     <div>
@@ -38,6 +44,7 @@
       <a href="https://top.gg/bot/1398397518445940906">Top.gg</a>
     </div>
   </footer>
-  <script src="network.js"></script>
+
+  <script src="stars.js"></script>
 </body>
 </html>
